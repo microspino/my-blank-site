@@ -60,4 +60,4 @@ Thanks / Copyrights
 
 Inspired by an article from [Chen Hui Jing](https://www.chenhuijing.com/blog/css-grid-flexbox-combo/#🎹)
 
-**reload-browser** from Eric Radman which also authored **entr**.
+[**reload-browser**](http://entrproject.org/scripts/reload-browser) from Eric Radman which also authored [**entr**](http://entrproject.org/).
