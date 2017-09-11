@@ -1,23 +1,30 @@
-File html/css/js vuoto di prova
--------------------------------
+SitoVoto
+========
 
-Da usare tutte le volte che devo fare qualche tipo di prova.
+Blank slate for html/css/js tinkering.
 
-E' possibile usarlo insieme a entr e allo script per fare autoreload del browser
+Useful to test new css/js snippets, frameworks, technologies. 
 
-Ad. es.:
+Use it in a dev-and-browser-refresh cycle with **entr** or other watch like tool and a browser reload tool like the reload-browser script provided here.
 
+Example Usage
+-------------
 
     ls *.css *.html *.js | entr reload-browser Firefox
 
 
-oppure:
+or:
 
     ls *.css *.html | entr reload-browser "Google Crome"
 
-si può usare anche con Safari.
+Tested also with Safari.
 
-E' necessario installare lo script di shell presente in questo repository in un path raggiungibile come, ad esempio `/usr/local/bin` .
+Copy the script on your PATH ex. `/usr/local/bin` .
+
+Cool Snippets folder
+--------------------
+
+WIll contain all the useful CSS/JS snippets i found googling a la **cool-shit-file**.
 
 Thanks / Copyrights
 -------------------
