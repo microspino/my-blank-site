@@ -18,3 +18,8 @@ oppure:
 si può usare anche con Safari.
 
 E' necessario installare lo script di shell presente in questo repository in un path raggiungibile come, ad esempio `/usr/local/bin` .
+
+Thanks / Copyrights
+-------------------
+
+Lo script reload-browser è di Eric Radman che è anche l'autore di **entr**.
