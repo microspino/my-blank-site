@@ -24,10 +24,9 @@ or:
 
 Tested also with Safari.
 
-Theres a Makefile with a simple **watch** recipe. Run it with `make watch`.
-Will open the provided `index.html` with Chrome and will start listening for css, js and html changes.
+This will open the provided `index.html` with Chrome, start listening for css, js and html changes and reload the browser when needed.
 
-Copy the script on your PATH ex. `/usr/local/bin` .
+You can also copy the **reload-browser** script on your PATH for ex. at `/usr/local/bin` and use `make watch`. This will work by using a Makefile with a simple **watch** recipe (provided).
 
 Cool Snippets folder
 --------------------
