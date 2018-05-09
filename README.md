@@ -11,10 +11,16 @@ Put your **CSS** into the style.css and your **JS** into scripts.js (both are pr
 
 Getting Started
 -------------
-    
-    git clone git@github.com:microspino/sitovoto.git "tinker-`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 6 | head -n 1`"
+On a Mac:
 
-This will create a `tinker-<6-random-chars-here>` folder in your current dir.
+    git clone git@github.com:microspino/sitovoto.git "tinker-`gshuf -i 1-1000 -n 1`"
+
+On Linux:
+
+    git clone git@github.com:microspino/sitovoto.git "tinker-`shuf -i 1-1000 -n 1`"
+
+This will create a `tinker-<3-numbers>` folder in your current dir.
+
 
 Example Usage
 -------------
