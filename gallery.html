@@ -19,7 +19,6 @@
     <script>
       function showPic (pic) {
         if (!document.getElementById) { return true; }
-        console.log('gallery');
         document.getElementById('placeholder').src = pic.href;
         var desc = pic.title ? pic.title : pic.childNodes[0].nodeValue;
         document.getElementById('desc').childNodes[0].nodeValue = desc;
@@ -43,7 +42,7 @@
   </ul>
   <div>
     <img id="placeholder" src='' />
-    <p id="desc"> </p>
+    <p id="desc">&nbsp;</p>
   </div>
 </body>
 </html>
