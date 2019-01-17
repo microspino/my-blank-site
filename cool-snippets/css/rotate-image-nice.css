@@ -1,0 +1,5 @@
+/* preso da https://helloweatherapp.com/about */
+img.to_rotate {
+  width: 90%;
+  transform: rotate(-2deg);
+}
