@@ -1,0 +1,10 @@
+input {
+    border: 1px solid #555;
+    border-radius: 4px;
+}
+
+button, input[type='submit'], input[type='reset'] {
+    background-color: #3aa;
+    border: none;
+    padding: .2em .7em;
+}
