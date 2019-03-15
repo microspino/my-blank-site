@@ -5,7 +5,7 @@ body {
 
 #container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr auto 1fr;
   grid-template-rows: auto;
   grid-template-areas:
     "logo nav ."
@@ -15,8 +15,9 @@ body {
 }
 
 body {background-color:#222b3a;}
-#logo {grid-area:logo; background-color:#222b3a; color:#eee;padding: 0.75rem 0.5rem;}
-#nav { grid-area: nav; background-color:#222b3a; padding: 0.75rem 0.5rem; color:#f8f9f4;}
+#logo {grid-area:logo; background-color:#222b3a; color:#eee;padding: 0.45rem 0.5rem;}
+#logo img { width:33px;border-radius:8px; }
+#nav { grid-area: nav; background-color:#222b3a; padding: 0.45rem 0.5rem; color:#f8f9f4;}
 #header {
   grid-area: header; background-color:floralwhite;
   display:flex;
@@ -25,11 +26,13 @@ body {background-color:#222b3a;}
   justify-content:center;
 }
 #main {
-  grid-area: main; background-color:#E4F4FA;
+  grid-area: main;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
+  background-color:#E4F4FA;
+  padding:0.5rem;
 }
 #footer {
   grid-area: footer;
@@ -46,7 +49,7 @@ body {background-color:#222b3a;}
 }
 header > * { max-width: 80rem; }
 #nav ul { display:flex; justify-content:space-around; max-width: 40rem; }
-#nav ul li  {padding:0.25rem 0.5rem;}
+#nav ul li  {padding:0.25rem 0.5rem; line-height: 1.5;}
 #main > article {
   margin:2rem auto;
   max-width: 45rem;
