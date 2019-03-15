@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML5 template</title>
+  <meta name="description" content="Blank HTML template">
+  <meta name="author" content="Daniele Spinosa">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+    <script>
+      function showPic (pic) {
+        if (!document.getElementById) { return true; }
+        document.getElementById('placeholder').src = pic.href;
+        var desc = pic.title ? pic.title : pic.childNodes[0].nodeValue;
+        document.getElementById('desc').childNodes[0].nodeValue = desc;
+        return false;
+      }
+    </script>
+
+</head>
+
+<body>
+  <ul>
+    <li>
+      <a onclick="return showPic(this)" href="images/city.png" title="A bunch of buildings in a city">City buildings</a>
+    </li>
+    <li>
+      <a onclick="return showPic(this)" href="images/old-house.jpg" title="An old house">Old house</a>
+    </li>
+    <li>
+      <a onclick="return showPic(this)" href="images/houses.jpg" title="A few houses">Houses on a hill</a>
+    </li>
+  </ul>
+  <div>
+    <img id="placeholder" src='' />
+    <p id="desc">&nbsp;</p>
+  </div>
+</body>
+</html>
