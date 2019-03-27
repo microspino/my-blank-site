@@ -53,7 +53,7 @@ header > * { max-width: 80rem; }
 #main > article {
   margin:2rem auto;
   max-width: 45rem;
-  padding: 2rem 3.5rem 4rem 2rem;
+  padding: 2rem;
   background-color:white;
   font-size: 1.3rem;
   line-height: 1.4;
@@ -65,23 +65,7 @@ header > * { max-width: 80rem; }
   font-size: 1.5em;
   margin-bottom: 1rem;
 }
-#main > article > .chap {
-  position:absolute;
-  top:2.5rem;
-  left:-2.5rem;
-  background:#7263ed;
-  color:#fff;
-  line-height:4rem;
-  width:4rem;
-  height:4rem;
-  border-radius:1rem;
-  font-size:2.5rem;
-  font-weight:bold;
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  justify-content:center;
-}
+
 /* Titles */
 h1 {
   color:#292c47;
@@ -97,7 +81,7 @@ h1 .highlight {
   padding: 0 0.3rem;
 }
 /*Links*/
-a { transition: color .4s; color: #f8f9f4; }
-a:link, a:visited { color: #f8f9f4; text-decoration:none;}
-a:hover   { color: #e4f4fa; }
-a:active  { transition: color .3s; color: #007BE6; }
+nav a { transition: color .4s; color: #f8f9f4; }
+nav a:link, a:visited { color: #f8f9f4; text-decoration:none;}
+nav a:hover   { color: #e4f4fa; }
+nav a:active  { transition: color .3s; color: #007BE6; }

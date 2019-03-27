@@ -1,0 +1,167 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Uso del Checkbox hack/trick</title>
+  <meta name="description" content="Blank HTML template">
+  <meta name="author" content="Daniele Spinosa">
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style>
+    .noselect {
+      -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+    }
+
+    #modal {
+      position:absolute;
+      top:0;left:0;
+      width:100%;height:100vh;
+      background:rgba(205,205,205,.75);
+      z-index:99;
+      visibility:hidden;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+    }
+    #toggleModal:checked ~ #modal{visibility:visible;}
+    #modal-content {height:200px;width:320px;background:#fff;padding:1rem;}
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="toggleModal" class="toggleModal" style="display: none;">
+  <div id="modal">
+    <div id="modal-content">
+      <h1>Cacca!</h1>
+      <label for="toggleModal" class="noselect">close modal</label>
+    </div>
+  </div>
+  <div id="container">
+    <div id="logo">
+      <img src="images/logo-sun.png" alt="logo">
+    </div>
+    <nav id="nav" role="navigation">
+      <ul>
+        <li> <a href="#">Home</a> </li>
+        <li> <a href="#">Tour</a> </li>
+        <li> <a href="#">About</a> </li>
+        <li> <a href="#">Contact</a> </li>
+        <!--Non andare oltre il quarto elemento -->
+      </ul>
+    </nav>
+
+    <header id="header" role="banner">
+      <h1>Checkbox Hack/Trick</h1>
+      <label for="toggleModal" class="noselect">open modal</label>
+    </header>
+
+    <section id="main" role="main">
+      <style>
+        .with-flip-bg input[type=checkbox] {
+           position: absolute;
+           top: -9999px;
+           left: -9999px;
+           /* For mobile, better to position checkbox on top of clickable area and turn opacity to 0 instead. */
+        }
+        .with-flip-bg label {
+          cursor:pointer;
+        }
+        .with-flip-bg div#flip-bg {
+           background: green;
+           color: white;
+           text-align: center;
+           padding:1em;
+           max-width:11em;
+        }
+        label ~ .with-flip-bg input[type=checkbox]:checked {
+          color:blue;
+        }
+        .with-flip-bg input[type=checkbox]:checked ~ div#flip-bg {
+           background: red;
+        }
+      </style>
+      <article class="with-flip-bg">
+        <label for="toggle-1" class="noselect"  unselectable="on" onselectstart="return false;" onmousedown="return false;">
+          Cambia sfondo
+        </label>
+        <input type="checkbox" id="toggle-1">
+        <div id="flip-bg">
+          <p>Clicca sul bottone qua sopra per cambiare il mio sfondo.</p>
+        </div>
+      </article>
+
+      <article id="menu1">
+        <style>
+          #menu1 label {cursor:pointer;vertical-align:top;line-height:24px;}
+          #menu1 #toggleMe{display:none;border: 1px solid black; padding: 10px;}
+          #menu1 .toggleControl:checked ~ #toggleMe{display:block;}
+          #menu1 .toggleControl ~ i {display:none;}
+          #menu1 .toggleControl:checked ~ i {display:inline;}
+          #menu1 .toggleControl ~ b {display:inline;}
+          #menu1 .toggleControl:checked ~ b {display:none;}
+        </style>
+        <label for="toggleControl1" class="noselect">Menu 1</label>
+        <input type="checkbox" id="toggleControl1" class="toggleControl" style="display: none;">
+        <i>
+          <img src="images/arrow-up-circle.svg" alt="open-menu"/>
+        </i>
+        <b>
+          <img src="images/arrow-down-circle.svg" alt="open-menu"/>
+        </b>
+        <div id="toggleMe">
+          <ul>
+            <li><a href="javascript:void(0);">1 item</a></li>
+            <li><a href="javascript:void(0);">2 item</a></li>
+            <li><a href="javascript:void(0);">3 item</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <article id="menu2">
+        <style>
+          #menu2 label {cursor:pointer;vertical-align:top;line-height:24px;}
+          #menu2 #toggleMe{display:none;border: 1px solid black; padding: 10px;}
+          #menu2 .toggleControl:checked ~ #toggleMe{display:block;}
+          #menu2 .toggleControl ~ i {display:none;}
+          #menu2 .toggleControl:checked ~ i {display:inline;}
+          #menu2 .toggleControl ~ b {display:inline;}
+          #menu2 .toggleControl:checked ~ b {display:none;}
+        </style>
+        <label for="toggleControl2" class="noselect">Menu 2</label>
+        <input type="checkbox" id="toggleControl2" class="toggleControl" style="display: none;">
+        <i>
+          <img src="images/arrow-up-circle.svg" alt="open-menu"/>
+        </i>
+        <b>
+          <img src="images/arrow-down-circle.svg" alt="open-menu"/>
+        </b>
+        <div id="toggleMe">
+          <ul>
+            <li><a href="javascript:void(0);">A item</a></li>
+            <li><a href="javascript:void(0);">B item</a></li>
+            <li><a href="javascript:void(0);">C item</a></li>
+          </ul>
+        </div>
+      </article>
+
+    </section>
+
+    <footer id="footer">
+      <h3>Footer</h3>
+    </footer>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
