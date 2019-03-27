@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Uso del Checkbox hack/trick</title>
+  <meta name="description" content="Blank HTML template">
+  <meta name="author" content="Daniele Spinosa">
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style>
+    .noselect {-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;}
+    nav label {cursor:pointer;}
+    nav label:hover {text-decoration:underline;}
+    nav label:focus {text-decoration:underline;outline:none;}
+    article {display:none;}
+    input[type=radio] {display:none;}
+    input[type=radio]:checked + article {display:block;}
+    </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="logo">
+      <img src="images/logo-sun.png" alt="logo">
+    </div>
+    <nav id="nav" role="navigation">
+      <ul>
+        <li><label tabindex="1" for="toggleArt1">Home</label></li>
+        <li><label tabindex="2" for="toggleArt2">Tour</label></li>
+        <li><label tabindex="3" for="toggleArt3">About</label></li>
+        <li><label tabindex="4" for="toggleArt4">Contact</label></li>
+        <!--Non andare oltre il quarto elemento -->
+      </ul>
+    </nav>
+
+    <header id="header" role="banner">
+      <h1>Checkbox Hack/Trick</h1>
+    </header>
+
+    <section id="main" role="main">
+      <input type="radio" id="toggleArt1" name="currentArt" checked>
+      <article id="art1">
+        <h1>Home</h1>
+      </article>
+
+      <input type="radio" id="toggleArt2" name="currentArt">
+      <article id="art2">
+        <h1>Tour</h1>
+      </article>
+
+      <input type="radio" id="toggleArt3" name="currentArt">
+      <article id="art3">
+        <h1>About</h1>
+      </article>
+
+      <input type="radio" id="toggleArt4" name="currentArt">
+      <article id="art4">
+        <h1>Contact</h1>
+      </article>
+    </section>
+
+    <footer id="footer">
+      <h3>Footer</h3>
+    </footer>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
